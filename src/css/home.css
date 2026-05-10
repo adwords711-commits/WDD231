@@ -1,0 +1,28 @@
+/* Intro and info sections */
+
+.intro {
+  padding: 2rem;
+}
+.intro >h1 {
+  font-family:  var(--bs-font-serif);
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding:  2rem;
+}
+.info > * {
+  flex: 1;
+}
+
+@media screen and (min-width: 630px) {
+  .info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
