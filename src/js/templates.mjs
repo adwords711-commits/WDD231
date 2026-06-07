@@ -1,3 +1,5 @@
+import spritePath from "../images/sprite.symbol.svg";
+
 export function parkInfoTemplate(info) {
     return `<a href="/" class="hero-banner__title">${info.name}</a>
     <p class="hero-banner__subtitle">
@@ -48,4 +50,36 @@ export function footerTemplate(info) {
     </section>
   `;
 }
+export function alertTemplate(alert) {
+  let alertType = alert.category.toLowerCase();
+  if (alertType === "park closure") {
+    alertType = "closure";
+  }
+  return `
+  <li class="alert alert-${alertType}">
+    <svg class="icon" focusable="false" aria-hidden="true">
+      <use xlink:href="${spritePath}#alert-${alertType}"></use>
+    </svg>
+
+    <div>
+      <h3 class="alert-${alertType}">${alert.title}</h3>
+      <p>${alert.description}</p>
+    </div>
+  </li>  
+`;
+}
+export function visitorCenterTemplate(center) {
+
+  return `
+    <li>
+      <h3>${center.name}</h3>
+      <p>${center.description}</p>
+      <p>${center.directionsInfo}</p>
+    </li>
+  `;
+}
+export function activityListTemplate(activities) {
+  return activities.map(activity => `<li>${activity.name}</li>`).join("");
+}
+// Turns each activity into a <li> and combines them
 

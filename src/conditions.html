@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>[Park Name]</title>
-    <script type="module" src="js/main.js"></script>
-    
+    <script type="module" src="./js/conditions.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/conditions.css">
   </head>
   <body>
     <p class="disclaimer">
@@ -56,47 +57,15 @@
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-          <button
-            id="global-nav-toggle"
-            class="global-nav__toggle"
-            aria-expanded="false"
-            aria-label="Open Menu"
-            >
-            <div class="global-nav__toggle--closed">
-                <svg class="icon">
-                <use
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/images/sprite.symbol.svg#menu"
-                ></use>
-                </svg>
-                <span class="visually-hidden">Open</span> Menu
-            </div>
-            <div class="global-nav__toggle--open">
-                <svg class="icon">
-                <use
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/images/sprite.symbol.svg#close"
-                ></use>
-                </svg>
-                Close
-            </div>
+          <button id="global-nav-toggle">
+            <svg class="icon">
+              <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="images/sprite.symbol.svg#menu"
+              ></use>
+            </svg>
+            <span class="visually-hidden">Open</span> MENU
           </button>
-          <nav class="global-nav">
-            <h2 class="global-nav__section-heading">Explore this Park</h2>
-            <ul class="global-nav__list">
-              <li>
-                <div class="global-nav__split-button">
-                  <a href="#">Plan Your Visit</a>
-                  <button class="global-nav__split-button__toggle">
-                    <span class="visually-hidden">Toggle submenu</span>
-                    <svg class="icon">
-                      <use xlink:href="/images/sprite.symbol.svg#arrow"></use>
-                    </svg>
-                  </button>
-                </div>
-              </li>
-            </ul>
-          </nav>
         </div>
       </section>
       <section id="park-header">
@@ -110,7 +79,6 @@
           </div>
         </div>
       </div>
-      
       <nav class="park-nav">
         <ul>
         <li>
@@ -168,8 +136,25 @@
       </section>
     </header>
     <main id="main">
-      <section class="intro"></section>
-      <section class="info"></section>
+        <h1>Current Conditions</h1>
+        <section class="alerts">
+            <h2>Alerts</h2>
+            <ul></ul>
+        </section>
+        <section class="visitor">
+            <h2>Visitor Services</h2>
+            <details name="current-details">
+                <summary>Visitor Centers</summary>
+                <ul></ul>
+            </details>
+        </section>
+        <section class="activities">
+            <h2>Activities</h2>
+            <details name="current-details">
+                <summary>All Activities</summary>
+                <ul></ul>
+            </details>
+        </section>
     </main>
     <footer id="park-footer"></footer>
   </body>

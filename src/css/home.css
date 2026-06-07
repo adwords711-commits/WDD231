@@ -5,15 +5,16 @@
 }
 .intro >h1 {
   font-family:  var(--bs-font-serif);
-  font-size: 3rem;
-  padding: 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+  /*padding: 1rem;*/
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding:  2rem;
+  gap: 1rem;
+  padding:  1rem;
 }
 .info > * {
   flex: 1;

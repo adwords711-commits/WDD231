@@ -52,6 +52,26 @@
   width: 2rem;
   height: 2rem;
 }
+/* Global nav styles */
+.global-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.global-nav__toggle--open {
+  display: none;
+  align-items: center;
+}
+.global-nav__toggle--closed {
+  display: flex;
+  align-items: center;
+}
+.global-nav.show {
+  max-height: 1000px;
+}
+
+
+
 .site-title h1 {
   font-size: 1.5rem;
   margin-left: 20px;

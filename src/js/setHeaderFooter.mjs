@@ -26,5 +26,6 @@ function setHeaderFooter(data) {
   setHeaderInfo(data);
   setFooter(data);
 }
+
 export default setHeaderFooter;
 
