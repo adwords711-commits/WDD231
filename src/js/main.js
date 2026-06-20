@@ -22,26 +22,7 @@ function setParkInfoLinks(data) {
   const cardHtml = data.map(mediaCardTemplate);
   infoSection.insertAdjacentHTML("afterbegin", cardHtml.join(""));
 }
-function enableNavigation() {
-  const menuButton = document.querySelector("#global-nav-toggle");
-  
-  menuButton.addEventListener("click", (ev) => {
-    let target = ev.target;
 
-    document.querySelector(".global-nav").classList.toggle("show");
-    
-    if (target.tagName != "BUTTON") {
-    target = target.closest("button");
-    }
-    
-    if (document.querySelector(".global-nav").classList.contains("show")) {
-    target.setAttribute("aria-expanded", true);
-    } else {
-  target.setAttribute("aria-expanded", false);
-  }
-
-  });
-}
 
 async function init() {
   const parkData = await getParkData("yell");
@@ -57,5 +38,3 @@ async function init() {
 }
 
 init();
-
-enableNavigation();
