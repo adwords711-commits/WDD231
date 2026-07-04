@@ -1,0 +1,41 @@
+/* badUx.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  margin: 0;
+  line-height: 1.6;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+  color: green;
+  text-align: center;
+  font-size: 80px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+form {
+  background-color: white;
+}
+ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+li {
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+form {
+  margin-top: 20px;
+}
